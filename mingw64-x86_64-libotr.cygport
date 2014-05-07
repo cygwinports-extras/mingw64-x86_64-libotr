@@ -1,0 +1,17 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-libotr"
+VERSION=4.0.0
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Off-the-Record messaging library for Win64 toolchain"
+DESCRIPTION="Off-the-Record (OTR) Messaging allows you to have private
+conversations over instant messaging."
+HOMEPAGE="http://www.cypherpunks.ca/otr/"
+SRC_URI="http://www.cypherpunks.ca/otr/libotr-${VERSION}.tar.gz"
+SRC_DIR="libotr-${VERSION}"
+PATCH_URI="3.2.0-no-undefined.patch
+           3.2.0-vpath.patch"
+
+MAKEOPTS+=" bin_PROGRAMS=  man_MANS=  MANLINKS= "

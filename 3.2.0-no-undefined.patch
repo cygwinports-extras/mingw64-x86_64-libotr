@@ -1,0 +1,12 @@
+--- origsrc/libotr-3.2.0/src/Makefile.am	2007-07-24 14:17:39.000000000 -0500
++++ src/libotr-3.2.0/src/Makefile.am	2008-07-24 20:46:58.828125000 -0500
+@@ -5,7 +5,8 @@
+ libotr_la_SOURCES = privkey.c context.c proto.c b64.c dh.c mem.c message.c \
+ 		    userstate.c tlv.c auth.c sm.c
+ 
+-libotr_la_LDFLAGS = -version-info @LIBOTR_LIBTOOL_VERSION@ @LIBS@ @LIBGCRYPT_LIBS@
++libotr_la_LDFLAGS = -version-info @LIBOTR_LIBTOOL_VERSION@ -no-undefined
++libotr_la_LIBADD = @LIBS@ @LIBGCRYPT_LIBS@
+ 
+ otrincdir = $(includedir)/libotr
+ 

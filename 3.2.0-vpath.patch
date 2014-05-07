@@ -1,0 +1,8 @@
+--- origsrc/libotr-3.2.0/toolkit/Makefile.am	2005-05-04 12:48:31.000000000 -0500
++++ src/libotr-3.2.0/toolkit/Makefile.am	2008-07-24 20:55:22.203125000 -0500
+@@ -1,4 +1,4 @@
+-INCLUDES = -I$(includedir) -I../src @LIBGCRYPT_CFLAGS@
++INCLUDES = -I$(includedir) -I$(top_srcdir)/src @LIBGCRYPT_CFLAGS@
+ 
+ noinst_HEADERS = aes.h ctrmode.h parse.h sesskeys.h readotr.h sha1hmac.h
+ 
